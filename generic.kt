@@ -17,7 +17,12 @@ class MutableStack <e>(vararg items:e){
     override fun toString() = "MutableStack (${elements.joinToString()})" //Convertendo a lista para texto
 }
 
+fun <e> MutableStackOf(vararg elements:e) = MutableStack(*elements) //Também é possível determinar funções com tipos genéricos
+
 fun main(){
+
+    val new_stack = MutableStackOf(1,2,3,5)
+    println(new_stack)
     val stack = MutableStack("A","B","C","D")
 
     stack.push("E")
