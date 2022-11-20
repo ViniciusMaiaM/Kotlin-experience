@@ -6,7 +6,7 @@ fun main(){
     nullable =  null
 
     fun str_length(word: String?): Int{
-        return word?.length ?: 0 //Função para retornar tamanho de str e operador ternario 
+        return word?.length ?: 0 //Função para retornar tamanho de str e operação similar a ternário
     }
     println(str_length(nullable))
     println(str_length("teste"))

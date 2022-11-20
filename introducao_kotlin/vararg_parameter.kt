@@ -1,6 +1,6 @@
 fun main(){
 
-    fun print_all(vararg messages: String){ //Com o vararg conseguimos passar uma quantidade indefinida de termo 
+    fun print_all(vararg messages: String){ //Com o vararg conseguimos passar uma quantidade indefinida de termos 
 //de um determinado tipo 
         for (text in messages){ //Ele trabalha como se fosse uma lista
             println(text)
