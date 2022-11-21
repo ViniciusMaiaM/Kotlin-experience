@@ -3,11 +3,11 @@
 //Similar ao dicionário do python
 
 const val POINTS: Int = 15
-val pass_acount: MutableMap<Int,Int> = mutablemapOf(1 to 100, 2 to 100, 3 to 100) //Criando chaves e valores
+val pass_acount: MutableMap<Int,Int> = mutableMapOf(1 to 100, 2 to 100, 3 to 100) //Criando chaves e valores
 val pass_report: Map<Int,Int> = pass_acount
 
 fun update_point(account_id:Int){
-    if (pass_acount.contaysKey(account_id)){ //Verificando se a chave existe no mapa
+    if (pass_acount.containsKey(account_id)){ //Verificando se a chave existe no mapa
         println("Update $account_id...")
         pass_acount[account_id] = pass_acount.getValue(account_id) + POINTS //Atribuição direta para chave
     }
