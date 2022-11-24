@@ -12,9 +12,9 @@ data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>, 
         inscritos.add(usuario)
     }
 
-    fun show_user(us: List<Usuario>){
-        for(user in us){
-            println("User ${user.id}: ${user.nome}")
+    fun show_user(){
+        for(user in inscritos){
+            println("User ${user.id} | ${user.nome}")
         }
     }
 
@@ -27,27 +27,32 @@ data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>, 
 
 
 fun main() {
-    val python = ConteudoEducacional("python",100,Nivel.BASICO)
-    val c = ConteudoEducacional("C",100,Nivel.INTERMEDIARIO)
+    val algo = ConteudoEducacional("Python",100,Nivel.BASICO)
+    val prog = ConteudoEducacional("C",100,Nivel.BASICO)
+    val poo = ConteudoEducacional("Dart",100,Nivel.INTERMEDIARIO)
     val us1 = Usuario("Vinicius",1)
     val us2 = Usuario("Tallys",2)
 
-    val list_content = mutableListOf<ConteudoEducacional>()
-        list_content.add(python)
-        list_content.add(c)
+    val grade = mutableListOf<ConteudoEducacional>()
+        grade.add(algo)
+        grade.add(prog)
+        grade.add(poo)
 
-    val list_user = mutableListOf<Usuario>()
-        list_user.add(us1)
-        list_user.add(us2)
-
-    val bsi = Formacao("BSI",list_content,Nivel.DIFICIL)
-    println("${bsi.nome} -- ${bsi.level}")
+    
+    val bsi = Formacao("BSI",grade,Nivel.DIFICIL)
+    println("--------Curso--------")
+    println("\t${bsi.nome} -- ${bsi.level}")
+    println("---------------------")
 
     bsi.matricular(us1)
     bsi.matricular(us2)
 
-    bsi.show_user(list_user)
+    println("\n-------Usuários-------")
+    bsi.show_user()
+    println("----------------------")
+    println("\n--------Content-------")
     bsi.show_content()
+    println("---------------------")
 }
 
 // "Utilize o parâmetro $usuario para simular uma matrícula (usar a lista de $inscritos)
