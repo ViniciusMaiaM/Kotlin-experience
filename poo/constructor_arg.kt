@@ -5,7 +5,7 @@ open class Lion(val name:String,val origin: String){
 }
 
 class Asiatic(name:String) : Lion(name = name, origin = "India")  
-// Também é possível determinar parametros a tempo de execução, 
+// Também é possível dete   rminar parametros a tempo de execução, 
 // o nome foi passado no construtor, mas a origem já estava definida
 
 fun main(){

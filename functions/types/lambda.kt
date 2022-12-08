@@ -8,7 +8,7 @@ fun main(){
     val uppercase3 = { str: String -> str.uppercase() }
     // val uppercase4 = { str -> str.uppercase() }
     val uppercase5: (String) -> String = { it.uppercase() }
-    val uppercase6: (String) -> String = String::uppercase
+    val uppercase6: (String) -> String = String::uppercase //Aqui faz uma chamada direta, similar ao high_order
 
     println(uppercase1("hello"))
     println(uppercase2("hello"))
